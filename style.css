@@ -28,7 +28,7 @@ body, html {
 }
 
 .jogo {
-    height: 100vmin;
-    width: 100vmin;
+    height: fit-content;
+    width: fit-content;
     background-color: rgb(61, 61, 61);
 }
