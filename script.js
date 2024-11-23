@@ -10,6 +10,8 @@ var loop = setInterval(() => {}, 10);
 
 function criar() {
     jogo.innerHTML = "";
+    table_array = [];
+    table_array_cont = [];
     for (let i = 0; i < cell_height; i++) {
     let line = [];
     let l = [];
