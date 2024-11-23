@@ -1,0 +1,34 @@
+td {
+    width: max-content;
+    height: max-content;
+    background-color: rgb(37, 37, 37);
+    border: 0px;
+}
+
+td[life="1"] {
+    background-color: yellow;
+}
+
+/* td[life="1"]:hover {
+    border: 5px solid red;
+}
+
+td[life="0"]:hover {
+    border: 5px solid green;
+} */
+
+table {
+    border: 2px black solid;
+    width: 100%;
+    height: 100%;
+}
+
+body, html {
+    height: 100%;
+}
+
+.jogo {
+    height: 100vmin;
+    width: 100vmin;
+    background-color: rgb(61, 61, 61);
+}
