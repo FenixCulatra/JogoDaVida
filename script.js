@@ -1,7 +1,7 @@
 var cell_height = 50;
 var cell_width = 50; 
 
-const table = document.createElement('table');
+
 const jogo = document.querySelector('.jogo');
 var table_array = [];
 var table_array_cont = [];
@@ -9,6 +9,7 @@ var pausa = false;
 var loop = setInterval(() => {}, 10);
 
 function criar() {
+    let table = document.createElement('table');
     jogo.innerHTML = "";
     table_array = [];
     table_array_cont = [];
