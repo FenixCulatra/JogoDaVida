@@ -111,22 +111,7 @@ function executeLifes() {
 function passo() {
     checkLifes();
     executeLifes();
-
 }
-
-// setInterval(() => {
-//     if (pausa) {
-//         for (let i = 0; i < table_array.length; i ++) {
-//             for (let j = 0; j < table_array[i].length; j++) {
-//                 if (table_array[i][j].getAttribute('life') == '0') {
-//                     table_array[i][j].setAttribute('life', '1');
-//                 } else {
-//                     table_array[i][j].setAttribute('life', '0');
-//                 }
-//             }
-//         }
-//     }
-// }, 100)
 
 function criarLoop(time) {
 clearInterval(loop);
