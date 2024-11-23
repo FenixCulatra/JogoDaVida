@@ -1,8 +1,12 @@
 td {
-    width: 20px;
-    height: 20px;
     background-color: rgb(37, 37, 37);
     border: 0px;
+    margin: 0;
+}
+
+tr {
+    margin: 0;
+    padding: 0;
 }
 
 td[life="1"] {
@@ -32,3 +36,4 @@ body, html {
     width: fit-content;
     background-color: rgb(61, 61, 61);
 }
+
