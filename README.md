@@ -7,9 +7,10 @@ Jogo Da Vida de Jhon Cownway
 - Comando criar() refaz a tabela, se alterar o valor das váriaveis do tópico anterior, a tabela altera. (Obs: melhor deixar quadrado, pois sou horrível com css)
 - Função "aleatorizar()" aleatoriza as células vivas e mortas;
 - Função "limpar()" mata todas as células;
-- Função ""
+- Função "passo()" se você quiser avançar apenas uma vez;
+- Função "criarLoop(arg_time)" troca arg_time por um tempo em milissegundos para mudar o tempo do looping de passo;
+- Existe outras funções dentro do código, mas nenhuma interessante para uso, pois são usadas apenas internamente para o funcionamento do jogo.
 
+# Observação Final
+Aprecie
 
-
-# Observação
-As
