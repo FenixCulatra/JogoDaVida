@@ -1,5 +1,5 @@
-const cell_height = 60;
-const cell_width = 60; 
+var cell_height = 50;
+var cell_width = 50; 
 
 const table = document.createElement('table');
 const jogo = document.querySelector('.jogo');
