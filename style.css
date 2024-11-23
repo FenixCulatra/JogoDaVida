@@ -1,6 +1,6 @@
 td {
-    width: max-content;
-    height: max-content;
+    width: 20px;
+    height: 20px;
     background-color: rgb(37, 37, 37);
     border: 0px;
 }
@@ -19,8 +19,8 @@ td[life="0"]:hover {
 
 table {
     border: 2px black solid;
-    width: 100%;
-    height: 100%;
+    width: fit-contet;
+    height: fit-contet;
 }
 
 body, html {
