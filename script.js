@@ -1,5 +1,4 @@
-var cell_height = 50;
-var cell_width = 50; 
+var table_size = 50; 
 
 
 const jogo = document.querySelector('.jogo');
@@ -9,15 +8,16 @@ var pausa = false;
 var loop = setInterval(() => {}, 10);
 
 function criar() {
+    
     let table = document.createElement('table');
     jogo.innerHTML = "";
     table_array = [];
     table_array_cont = [];
-    for (let i = 0; i < cell_height; i++) {
+    for (let i = 0; i < table_size; i++) {
     let line = [];
     let l = [];
     let tr = document.createElement('tr');
-    for (let j = 0; j < cell_width; j++) {
+    for (let j = 0; j < table_size; j++) {
         td = document.createElement('td');
         td.setAttribute('life', 0)
         
@@ -38,7 +38,7 @@ function criar() {
 }
 
 jogo.appendChild(table);
-
+cssUpdate();
 }
 
 
@@ -67,17 +67,17 @@ function checkLife(y, x) {
     let cont = 0;
     if (y - 1 >= 0) {
         if (x - 1 >= 0) {if (table_array[y - 1][x - 1].getAttribute('life') == '1') {cont += 1}};
-        if (x + 1 < cell_width) {if (table_array[y - 1][x + 1].getAttribute('life') == '1') {cont += 1}};
+        if (x + 1 < table_size) {if (table_array[y - 1][x + 1].getAttribute('life') == '1') {cont += 1}};
         if (table_array[y - 1][x].getAttribute('life') == '1') {cont += 1}; 
     }
-    if (y + 1 < cell_height) {
+    if (y + 1 < table_size) {
         if (x - 1 >= 0) {if (table_array[y + 1][x - 1].getAttribute('life') == '1') {cont += 1}};
-        if (x + 1 < cell_width) {if (table_array[y + 1][x + 1].getAttribute('life') == '1') {cont += 1}};
+        if (x + 1 < table_size) {if (table_array[y + 1][x + 1].getAttribute('life') == '1') {cont += 1}};
         if (table_array[y + 1][x].getAttribute('life') == '1') {cont += 1};
     }
     
     if (x - 1 >= 0) {if (table_array[y][x - 1].getAttribute('life') == '1') {cont += 1}};
-    if (x + 1 < cell_width) {if (table_array[y][x + 1].getAttribute('life') == '1') {cont += 1}};
+    if (x + 1 < table_size) {if (table_array[y][x + 1].getAttribute('life') == '1') {cont += 1}};
     
     // if (table_array[y][x].getAttribute('life') == '1') {
     //     if (cont >= 4 || cont <= 1) table_array[y][x].setAttribute('life', '0');
@@ -125,6 +125,28 @@ loop = setInterval(() => {
 }, time)
 }
 
+function cssUpdate() {
+    if (table_size < 100) {
+        document.querySelectorAll('td').forEach((i) => {
+            i.style.width = "30px";
+            i.style.height = "30px";
+        })
+    } else {
+    if (table_size < 200) {
+        document.querySelectorAll('td').forEach((i) => {
+            i.style.width = "15px";
+            i.style.height = "15px";
+        })
+    } else {
+        document.querySelectorAll('td').forEach((i) => {
+            i.style.width = "1px";
+            i.style.height = "1pxt";
+        })
+    }
+
+    
+    }
+}
+
 criarLoop(100);
 criar()
-
